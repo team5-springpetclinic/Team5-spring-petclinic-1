@@ -51,7 +51,7 @@ FROM openjdk:21-slim
 # --- Status: Downloaded newer image for openjdk:21-slim
 # --- root@567bcc774a02:/# 
 #
-## 2.0 root@cc02bd8270b2:/# git clone
+## 2.0 root@f018c9e27d41:/# git clone
 ## --- bash: git: command not found                          # don't know command "git clone"
 #
 # 2.0 root@567bcc774a02:/#  git clone
@@ -59,7 +59,7 @@ FROM openjdk:21-slim
 # 3.0 root@567bcc774a02:/#  apt-get
 # --- apt 2.2.4 (amd64)                                      # command "apt-get " available , you can up get upgates
 # 
-## 3.0 root@cc02bd8270b2:/# apt-get
+## root@f018c9e27d41:/# apt-get
 # --- apt 2.2.4 (amd64)                                          # command "apt-get " available , you can up get upgates
 #
 # 4.0 root@567bcc774a02:/# apt-get update
@@ -67,7 +67,7 @@ FROM openjdk:21-slim
 # --- Fetched 8643 kB in 1s (5987 kB/s)                           
 # --- Reading package lists... Done
 #
-## 4.0 root@cc02bd8270b2:/# apt-get update
+## 4.0 root@f018c9e27d41:/# apt-get update
 ## -- Get:6 http://deb.debian.org/debian bullseye-updates/main amd64 Packages [14.6 kB]
 ## --- Fetched 8643 kB in 1s (5987 kB/s)                           
 ## --- Reading package lists... Done
@@ -78,12 +78,12 @@ FROM openjdk:21-slim
 # --- Setting up git (1:2.30.2-1+deb11u2) ...
 # --- Processing triggers for libc-bin (2.31-13+deb11u5) ...
 # 
-## 5.0 root@cc02bd8270b2:/# apt-get install git
+## 5.0 root@f018c9e27d41:/# apt-get install git
 ## --- After this operation, 99.4 MB of additional disk space will be used.
 ## --- Do you want to continue? [Y/n] y
 ## --- Setting up git (1:2.30.2-1+deb11u2) ...
 ## --- Processing triggers for libc-bin (2.31-13+deb11u5) ...
-## --- root@cc02bd8270b2:/# 
+## --- root@f018c9e27d41:/# 
 #
 # -------------------------- Added command ----- View -------------------
 # FROM openjdk:21-slim
