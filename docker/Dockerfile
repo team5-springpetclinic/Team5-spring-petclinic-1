@@ -201,6 +201,7 @@ RUN ./mvnw package
 # --- show code > LICENSE.txt  build.gradle  docker-compose.yml  gradle  gradlew  gradlew.bat  mvnw  mvnw.cmd  pom.xml  readme.md  settings.gradle  src  target
 ## 2.0 root@f420a4d8bcaa:/# ls /app                               # show code 
 ## --- show code > LICENSE.txt docker-compose.yml  gradlew   mvnw	 pom.xml    settings.gradle build.gradle  gradle  gradlew.bat  mvnw.cmd  readme.md  src
+#
 #  --------------------------------- RUN ./mvnw package -------------------
 # 
 # 1.0 root@943f5b096da6:/# cd /app
@@ -222,7 +223,9 @@ RUN ./mvnw package
 # ------------------------------------------------------------------------------------
 #
 #------------------------ RRUNNING -------- java -jar target/*.jar -------------------------
-# 1.0 root@943f5b096da6:/app# java -jar target/*.jar
+# 1.0 root@943f5b096da6:/app# 
+
+
 # 2.0 CONTROL+C                            # CANCELED -because image working
 # --- root@943f5b096da6:/app# 
 # 3.0 root@943f5b096da6:/app# ls target/*.jar
@@ -263,28 +266,61 @@ CMD ["java", "-jar", "target/spring-petclinic-3.0.0-SNAPSHOT.jar"]
 # --- 001255d70c79   tdambaev/petclinic:v1   "/bin/bash"              48 seconds ago   Up 47 seconds                                               gallant_gould
 # --- 68599ad0ce66   tdambaev/petclinic:v2   "java -jar target/sp…"   36 minutes ago   Up 36 minutes   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp   friendly_robinson
 #
-# ----------------------- ONLY TESTING -------------------------------------
+# ---------------------------------------- ONLY TESTING -------------------------------------
+#
 # 1.0 TsyrenD@ip-10-0-101-208 Team5-spring-petclinic]$ docker attach 001255d70c79 
 # --- root@001255d70c79:/app# 
 # 2.0 root@001255d70c79:/app# ls target/
 # --- checkstyle-cachefile    checkstyle-header.txt  checkstyle-suppressions.xml  generated-sources       jacoco.exec     maven-status  spring-petclinic-3.0.0-SNAPSHOT.jar           surefire-reports
 # --- checkstyle-checker.xml  checkstyle-result.xml  classes                      generated-test-sources  maven-archiver  site          spring-petclinic-3.0.0-SNAPSHOT.jar.original  test-classes
-
-
-# --------------------------- HOW CHECK ALL CONTAINER -----------------
+#
+# ---------------------------------------- ONLY TESTING ---------- UP ---------------------------
+#
+#
+# ---------------------------------- HOW CHECK ALL CONTAINER -----------------
 #
 # [TsyrenD@ip-10-0-101-208 Team5-spring-petclinic]$ docker ps -a
 #
-# --------------------------- HOW CHECK ALL CONTAINER ---- UP -------------
-
-
-#  ------------------------------------------------------------- TROUBLESHOUTING  DOCKER  CONTAINER ----------------------------------------
+# ------------------------------------ HOW CHECK ALL CONTAINER ---- UP -------------
+#
+#
+# ------------------HOW ---------------  ATTACH CONTAINER -------------------------
+#
+# 1.0 TsyrenD@ip-10-0-101-208 Team5-spring-petclinic]$ docker attach java1
+# --- root@943f5b096da6:/# 
+## 1.0 [root@Docker ~]# docker attach java1
+## --- root@f420a4d8bcaa:/# 
+# 2.0 root@943f5b096da6:/# ls /app                                # show code 
+# --- show code > LICENSE.txt  build.gradle  docker-compose.yml  gradle  gradlew  gradlew.bat  mvnw  mvnw.cmd  pom.xml  readme.md  settings.gradle  src  target
+## 2.0 root@f420a4d8bcaa:/# ls /app                               # show code 
+## --- show code > LICENSE.txt docker-compose.yml  gradlew   mvnw	 pom.xml    settings.gradle build.gradle  gradle  gradlew.bat  mvnw.cmd  readme.md  src
+#
+# ------------------HOW ------UP---------  ATTACH CONTAINER -------------------------
+#
+#
+# --------------------------------------- TROUBLESHOUTING  DOCKER  CONTAINER ----------------------------------------
 #  
 # Docker Logs
 #   docker logs CONTAINER _ID
-# -------------------------------------------------------------- TROUBLESHOUTING  DOCKER  CONTAINER ----------UP------------------------------
-
-
+# ---------------------------------------- TROUBLESHOUTING  DOCKER  CONTAINER ----------UP------------------------------
+#
+#
+# ---------------------------------------- HOW know  VOLUME -------------------------
+#
+# [root@Docker docker]# docker volume ls
+# DRIVER    VOLUME NAME
+# local     spring-petclinic
+# EXAMPLE  > docker run -d -v ~/app:/app IMAGE
+#
+# ---------------------------------------- HOW know  VOLUME ------- UP------------------
+#
+#
+# ------------------------------------------ DOCKER COPY ----------------------
+#
+#   EXAMPLE >     docker cp ~/data/ CONTAINER _ID:/app/
+#
+# ----------------------------- UP --------- DOCKER COPY ----------------------
+#
 # 1.0 root@943f5b096da6:/app# ls target/*.jar
 # --- target/spring-petclinic-3.0.0-SNAPSHOT.jar  ------------------ this is a really name " .jar" file
 # --- Change >>>> CMD ["java" "-jar" "target/*.jar"] >>>> CMD ["java", "-jar", "target/*.jar"] >>>
@@ -293,7 +329,6 @@ CMD ["java", "-jar", "target/spring-petclinic-3.0.0-SNAPSHOT.jar"]
 #
 # [TsyrenD@ip-10-0-101-208 docker]$ docker build -t "tdambaev/petclinic:v1" . 
 # 
-
 
 
 
