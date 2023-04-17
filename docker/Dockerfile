@@ -333,3 +333,23 @@ CMD ["java", "-jar", "target/spring-petclinic-3.0.0-SNAPSHOT.jar"]
 
 
 # [TsyrenD@ip-10-0-101-208 Team5-spring-petclinic]$ docker run -d -p 8080:80808 tdambaev/petclinic:v2
+
+
+
+# [TsyrenD@ip-10-0-101-208 docker]$ docker login
+# Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+# Username: tsyrend
+# Password: M
+# WARNING! Your password will be stored unencrypted in /mnt/TsyrenD/.docker/config.json.
+# Configure a credential helper to remove this warning. See
+#  https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+#
+# [TsyrenD@ip-10-0-101-208 docker]$  docker push tsyrend/petclinic:v1
+# The push refers to repository [docker.io/tsyrend/petclinic]
+# b111ef8d7da2: Pushed 
+# 112a6a3f065f: Pushed 
+# 0aaf98be28c8: Mounted from library/openjdk 
+# 2b1547e41775: Mounted from library/openjdk 
+# ed7b0ef3bf5b: Mounted from library/openjdk 
+# v1: digest: sha256:b401704c235700a60202e886b1ef00ceb0abbd2b1f671602491a4120a794c8ae size: 1377
+#
