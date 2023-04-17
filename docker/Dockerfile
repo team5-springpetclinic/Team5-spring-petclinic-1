@@ -138,11 +138,17 @@ RUN ./mvnw package
 # 2.0 [TsyrenD@ip-10-0-101-208 Team5-spring-petclinic]$ git clone https://github.com/spring-projects/spring-petclinic.git    # in root
 # --- Resolving deltas: 100% (3627/3627), done.
 # --- Updating files: 100% (111/111), done.
-# 4.0 [TsyrenD@ip-10-0-101-208 Team5-spring-petclinic]$ ls
-# --- docker  README.md  spring-petclini
+## 2.0 [root@Docker ~]# git clone https://github.com/spring-projects/spring-petclinic.git
+## --- Receiving objects: 100% (9579/9579), 7.73 MiB | 0 bytes/s, done.
+## --- Resolving deltas: 100% (3626/3626), done.
 # 3.0 [TsyrenD@ip-10-0-101-208 Team5-spring-petclinic]$ docker run -d -it --name java1 -v ~/spring-petclinic:/app openjdk:21-slim /bin/bash          # Mount file /spring-petclinic:/app in container # in create container with image=openjdk:21-slim
 # --- 943f5b096da6aba5616a719e2add851c024256edca77d54710e8a45959e83a12
-# 4.0 [TsyrenD@ip-10-0-101-208 Team5-spring-petclinic]$ docker exec java1 ls /app  
+## 3.0 [root@Docker ~]# docker run -d -it --name java1 -v ~/spring-petclinic:/app openjdk:21-slim /bin/bash
+## --- f420a4d8bcaa80a0307fcc6f487cc6f41a03a39e199c56545c95438dae5e9338
+# 4.0 [TsyrenD@ip-10-0-101-208 Team5-spring-petclinic]$ ls
+# --- docker  README.md  spring-petclini
+# 5.0 [TsyrenD@ip-10-0-101-208 Team5-spring-petclinic]$ docker exec java1 ls /app  
+## 5.0 [root@Docker ~]#  docker exec java1 ls /app  
 # --------------------------------- see all code ------------------------------
 # --- LICENSE.txt
 # --- build.gradle
@@ -182,9 +188,6 @@ RUN ./mvnw package
 ## --- target
 # --------------------------------- see all code -UP -----------------------------
 #
-#
-
-
 # ---------------------------------  HOW DELETE Container ---------------------
 # [TsyrenD@ip-10-0-101-117 dacker]$ docker rm --force java2              # if you have trash container "java2"
 #
@@ -192,9 +195,12 @@ RUN ./mvnw package
 #
 # 1.0 TsyrenD@ip-10-0-101-208 Team5-spring-petclinic]$ docker attach java1
 # --- root@943f5b096da6:/# 
+## 1.0 [root@Docker ~]# docker attach java1
+## --- root@f420a4d8bcaa:/# 
 # 2.0 root@943f5b096da6:/# ls /app                                # show code 
 # --- show code > LICENSE.txt  build.gradle  docker-compose.yml  gradle  gradlew  gradlew.bat  mvnw  mvnw.cmd  pom.xml  readme.md  settings.gradle  src  target
-# 
+## 2.0 root@f420a4d8bcaa:/# ls /app                               # show code 
+## --- show code > LICENSE.txt docker-compose.yml  gradlew   mvnw	 pom.xml    settings.gradle build.gradle  gradle  gradlew.bat  mvnw.cmd  readme.md  src
 #  --------------------------------- RUN ./mvnw package -------------------
 # 
 # 1.0 root@943f5b096da6:/# cd /app
