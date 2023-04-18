@@ -17,7 +17,7 @@ jobs:
     
     - name: Build the Docker image
       run:  
-        docker build  -t "tdambaev/petclinic:${{ github.sha }}" .
+        docker build  -t "tsyend/petclinic:${{ github.sha }}" .
         docker images
 
     
