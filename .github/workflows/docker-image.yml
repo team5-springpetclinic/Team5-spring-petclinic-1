@@ -12,8 +12,12 @@ jobs:
 
     runs-on: ubuntu-latest
 
+<<<<<<< HEAD
     steps: 
   
+=======
+/mnt/TsyrenD/Team5-spring-petclinic/.github/workflows    steps:
+>>>>>>> bd4326619d5da95405997285341aa23c7dbd5671
     - uses: actions/checkout@v3
     
     - name: Build the Docker image
