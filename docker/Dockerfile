@@ -387,3 +387,9 @@ CMD ["java", "-jar", "target/spring-petclinic-3.0.0-SNAPSHOT.jar"]
 #
 #
 # ------ I FINISHED WATCH DOCKER#3 ON 1.13.00 -----------------
+#
+# -----------GITHUB ACTION BEST WAY FROM 19:00 ----------------
+#
+#
+#
+#
