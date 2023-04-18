@@ -334,8 +334,8 @@ CMD ["java", "-jar", "target/spring-petclinic-3.0.0-SNAPSHOT.jar"]
 
 # [TsyrenD@ip-10-0-101-208 Team5-spring-petclinic]$ docker run -d -p 8080:80808 tdambaev/petclinic:v2
 
-
-
+# ----------------------- DOCKER ------------------
+#
 # [TsyrenD@ip-10-0-101-208 docker]$ docker login
 # Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
 # Username: tsyrend
@@ -353,3 +353,37 @@ CMD ["java", "-jar", "target/spring-petclinic-3.0.0-SNAPSHOT.jar"]
 # ed7b0ef3bf5b: Mounted from library/openjdk 
 # v1: digest: sha256:b401704c235700a60202e886b1ef00ceb0abbd2b1f671602491a4120a794c8ae size: 1377
 #
+# ---------------------- DOCKER COMMAND -------------
+# Docker  Buld Images 
+# ----- docker build > Docker Engine
+# ----- docker build -t "tsyrend/petclinic:v1" .
+#
+# Podman Buld Images 
+# ----- podman build (Does't REquire Docker Engine)
+# ----- podman build -t "tsyrend/petclinic:v1" .
+# Podman Buld Images - SAME COMMAND - Docker  Buld Images
+#
+#
+# Docker Logs
+# ----- docker logs CONTAINER_ID
+#
+# DOCKER Volumes
+# ----- Example
+# ---------- docker run -d -v ~/app:/app IMAGE
+#
+# DOCKER  Copy Files/Folders
+# ----- Example
+# ----------- docker cp ~/data/CONTAINER_ID:/app
+#
+# Push Image to DockerHub
+# ----- docker login
+# -------- > username
+# -------- > password
+# ----- docker push DOCKERHUB_USERNAME/petclinic:v1
+# 
+#
+#
+# ------------------------------ DOCKER -------------------------
+#
+#
+# ------ I FINISHED WATCH DOCKER#3 ON 1.13.00 -----------------
