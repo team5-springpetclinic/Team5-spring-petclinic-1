@@ -108,7 +108,7 @@ FROM openjdk:21-slim
 # COPY all command RUN & RUN from top line >>>>> inside spring-petclinic /app 
 #
 # 4.0 COPY spring-petclinic /app          # spring-petclinic=application code
-COPY spring-petclinic/ /app
+COPY APP/ /app
 #
 # ---------------------------- NEW VIEW --------------------------------------------
 # FROM openjdk:21-slim
