@@ -24,7 +24,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build the Docker Image
-        run: 
+        run: |
           docker build -t "tdambaev/petclinic:${{ github.sha }}" .
           docker images
           
